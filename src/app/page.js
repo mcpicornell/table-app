@@ -66,11 +66,11 @@ export default function Home() {
                 className="border-b border-gray-300 cursor-pointer transition-colors hover:bg-gray-100"
                 onClick={() => router.push(`/events/${event.id}`)}
               >
-                <td className="py-2 px-4">{event.id}</td>
-                <td className="py-2 px-4">{event.name}</td>
-                <td className="py-2 px-4">{event.date}</td>
-                <td className="py-2 px-4">{event.location}</td>
-                <td className="py-2 px-4">{event.description}</td>
+                <td className="py-2 px-4 text-center">{event.id}</td>
+                <td className="py-2 px-4 text-center">{event.name}</td>
+                <td className="py-2 px-4 text-center">{event.date}</td>
+                <td className="py-2 px-4 text-center">{event.location}</td>
+                <td className="py-2 px-4 text-center">{event.description}</td>
               </tr>
             ))}
           </tbody>
