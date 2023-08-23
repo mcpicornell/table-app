@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "name": "Tech Conference 2023",
+      "date": "2023-09-15",
+      "location": "Virtual",
+      "description": "A conference focused on the latest tech trends and innovations."
+    },
+    {
+      "id": 2,
+      "name": "Art Exhibition",
+      "date": "2023-10-05",
+      "location": "City Art Gallery",
+      "description": "An exhibition showcasing the works of local artists."
+    },
+    {
+      "id": 3,
+      "name": "Music Festival",
+      "date": "2023-07-20",
+      "location": "Central Park",
+      "description": "A music festival featuring live performances from various bands."
+    },
+    {
+      "id": 4,
+      "name": "Food Fair",
+      "date": "2023-08-10",
+      "location": "Downtown Square",
+      "description": "A food fair with a variety of cuisines from around the world."
+    },
+    {
+      "id": 5,
+      "name": "Charity Run",
+      "date": "2023-06-15",
+      "location": "Community Park",
+      "description": "A charity run to raise funds for local causes."
+    },
+    {
+      "id": 6,
+      "name": "Comedy Night",
+      "date": "2023-11-08",
+      "location": "Laugh House Comedy Club",
+      "description": "An evening of laughter with stand-up comedians."
+    },
+    {
+      "id": 7,
+      "name": "Startup Pitch Event",
+      "date": "2023-08-25",
+      "location": "Innovation Hub",
+      "description": "Startups pitch their ideas to a panel of investors."
+    },
+    {
+      "id": 8,
+      "name": "Fashion Show",
+      "date": "2023-09-30",
+      "location": "Grand Event Hall",
+      "description": "A glamorous fashion show featuring the latest designs."
+    },
+    {
+      "id": 9,
+      "name": "Science Symposium",
+      "date": "2023-10-18",
+      "location": "Science Institute",
+      "description": "A gathering of scientists to discuss cutting-edge research."
+    },
+    {
+      "id": 10,
+      "name": "Outdoor Movie Night",
+      "date": "2023-07-08",
+      "location": "Town Park",
+      "description": "An outdoor movie screening under the stars."
+    }
+  ]
