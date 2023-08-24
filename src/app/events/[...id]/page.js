@@ -36,16 +36,16 @@ export default function Event({ params }) {
   }, [eventObj, numberEvents]);
 
   const prevEvent = () => {
-    if (eventId == 1) {
-      return eventId;
+    if (Number(eventId) === 1) {
+      return numberEvents;
     }
-    return parseInt(eventId) - 1;
+    return Number(eventId) - 1;
   };
   const nextEvent = () => {
-    if (eventId == numberEvents) {
-      return eventId;
+    if (Number(eventId) === numberEvents) {
+      return 1;
     }
-    return parseInt(eventId) + 1;
+    return Number(eventId) + 1;
   };
 
   const navToPrevEvent = prevEvent();
@@ -53,29 +53,22 @@ export default function Event({ params }) {
 
   return (
     <Container>
-      <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-6 rounded-lg shadow-lg">
-        {!eventObj && !numberEvents ? (
-          <Progress value={5} />
-        ) : (
-          <div className="bg-gradient-to-r from-blue-400 to-purple-500 p-6 rounded-lg shadow-lg">
-            <div className="text-white">
-              <p className="text-2xl font-semibold">Event: {eventObj.id}</p>
-              <p className="mt-2 text-gray-300">Date: {eventObj.date}</p>
-              <p className="mt-1 text-gray-300">
-                Location: {eventObj.location}
-              </p>
-            </div>
-            <div className="mt-4">
-              <p className="text-white text-lg">Description:</p>
-              <p className="mt-2 text-gray-300">{eventObj.description}</p>
-            </div>
+    {!eventObj && !numberEvents ? (
+      <Progress value={50} />
+    ) : (
+      <div className="flex flex-col space-y-4">
+        <div className="bg-gradient-to-r from-blue-400 to-purple-500 p-6 rounded-lg shadow-lg text-center">
+          <div className="text-white">
+            <p className="text-2xl font-semibold">Event: {eventObj.id}</p>
+            <p className="mt-2 text-gray-300">Date: {eventObj.date}</p>
+            <p className="mt-1 text-gray-300">Location: {eventObj.location}</p>
           </div>
-        )}
-      </div>
-      {!eventObj && !numberEvents ? (
-        <Progress value={5} />
-      ) : (
-        <ButtonsContainer>
+          <div className="mt-4">
+            <p className="text-white text-lg">Description:</p>
+            <p className="mt-2 text-gray-300">{eventObj.description}</p>
+          </div>
+        </div>
+        <ButtonsContainer className="flex space-x-4">
           <Button
             variant="outline"
             size="icon"
@@ -91,10 +84,10 @@ export default function Event({ params }) {
             <ChevronRight className="h-4 w-4" />
           </Button>
         </ButtonsContainer>
-      )}
-    </Container>
-  );
-}
+      </div>
+    )}
+  </Container>
+)};
 
 const Container = styled.div`
   width: 70%;
@@ -108,5 +101,5 @@ const ButtonsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  bottom: 120px;
+  bottom: 90px;
 `;
